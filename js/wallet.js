@@ -28,7 +28,7 @@ function depositFunction(event) {
 // save wallate in local storage
 // update the wallet in HTMl
     event.preventDefault(); 
-    newWallet.amount += depositInput.value;
+    newWallet.amount += Number(depositInput.value);
     console.log(newWallet.amount)
     saveWallet();
     inMyWallet();
@@ -52,7 +52,7 @@ function withDrawFunction(event) {
         console.log('you don\'t have enough money')
     }
     else{
-    newWallet.amount -= withdrawInput.value;
+    newWallet.amount -= Number(withdrawInput.value);
     }
     console.log(newWallet.amount)
     saveWallet();
@@ -84,8 +84,8 @@ function inMyWallet(){
 
 
 // Create an event listener so that when the donate link is clicked, the donateFunction method is invoked.
-var donate = document.getElementById('btn_3');
-donate.addEventListener('submit', donateFunction)
+var donate = document.getElementById('btn3');
+donate.addEventListener('click', donateFunction)
 var donateAmount;
 
 function donateFunction(event) {
