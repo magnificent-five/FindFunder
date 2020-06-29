@@ -259,6 +259,7 @@ input {
 #title{
   font-size: 300%;
   margin: 50px;
+  color:rgba(83, 82, 82, 0.867)
 }
 
 .img-info{
@@ -273,7 +274,7 @@ input {
   object-position: 50% 50%;
   width: fit-content;
   width: 100%;
-  height: 400px;
+  height: 500px;
 
 }
 #information{
@@ -291,6 +292,7 @@ input {
 #donate{
 display: inline;
 font-size: 300%;
+color:rgba(83, 82, 82, 0.867)
 }
 .fa-hand-holding-usd{
 margin-left: 20px;
@@ -300,6 +302,7 @@ font-size: 250%;
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 150%;
+  color:rgba(83, 82, 82, 0.867)
 }
 hr{
   height: 5px;
@@ -307,13 +310,17 @@ hr{
   
 }
 #iconName , #iconLocation{
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .fa-user , #name , .fa-map-marker-alt , #location{
   display: inline;
   font-size: 200%;
   margin-right: 10px;
+  color:rgba(83, 82, 82, 0.867)
   
+}
+.fa-user ,  .fa-map-marker-alt ,.fa-hand-holding-usd{
+  color:#90c99a
 }
 
 /* #fasbtn_2,#btn_1 :hover{  
