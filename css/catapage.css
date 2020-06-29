@@ -1,0 +1,30 @@
+#projectsPreview{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+     text-align: center;
+}
+#projectsPreview div{
+padding: 20px;
+font-size: 30px;
+text-align: center;
+
+}
+
+
+.imageStyle {
+    width: 300px;
+    height: 300px;
+
+  }
+  
+  #projectsPreview article {
+    width: 300px;
+    height: 300px;
+    background-color: cadetblue;
+    color: black;
+    text-decoration: none;
+
+
+  }
+  

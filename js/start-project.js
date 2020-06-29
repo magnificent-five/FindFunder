@@ -1,6 +1,8 @@
 'use strict'
 //add  event listner to the submit and collect data for 
 // for the project pages .
+import{data} from"./dummy-data.js" 
+console.log(data);
 var formData = document.getElementById("project-form");
 formData.addEventListener("submit", handleSubmit);
 function handleSubmit(event) {
@@ -16,7 +18,7 @@ function handleSubmit(event) {
     console.log(title, image, goal, name, location, catagory, story);
     var project = new ProjectMaker(title, image, goal, name, location, story, catagory);
     project.createRandomRaised();
-    allProjects.push(project);
+   
     filteration();
     console.log(educationArr);
 
@@ -35,6 +37,7 @@ function ProjectMaker(title, image, goal, name, location, story, catagory) {
     this.id = allProjects.length;
     this.catagory = catagory;
     this.raised = 0;
+    allProjects.push(this);
 }
 ProjectMaker.prototype.createRandomRaised = function () {        //generate randomValue for raised
     this.raised = Math.floor(Math.random() * (10000 - 1000) + 1000);
@@ -61,3 +64,15 @@ function checkExistance(e) {
    medicalArr= allProjects.filter(checkExistance, 'Medical');
    non_profitArr = allProjects.filter(checkExistance, 'Nonprofit');
   }
+  function preExisting(){
+      for (var i =0 ; i < data.length; i++){
+
+       var preObject = new ProjectMaker(data[i].title, data[i].image, data[i].goal, data[i].name, data[i].location, data[i].story, data[i].catagory);
+       preObject.createRandomRaised();
+       
+      }
+  
+  }
+  preExisting()
+  filteration()
+  addToLoalStorage()
