@@ -143,7 +143,7 @@ li.dropdown {
   background-color: #90c99a;
 }
 
-.form-container{
+.form-container {
   margin: 50px 0;
 }
 #section1 {
@@ -153,7 +153,6 @@ li.dropdown {
 }
 
 #section2 {
-  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -224,6 +223,10 @@ li.dropdown {
   position: relative;
   top: -200px;
 }
+
+#walletValue {
+  font-size: 30pt;
+}
 h1 {
   color: dimgray;
 }
@@ -246,6 +249,8 @@ h3 {
 input {
   border: 2px solid dodgerblue;
 }
+
+
 #first {
   margin-left: 399px;
   position: relative;
@@ -265,11 +270,7 @@ input {
     padding: 20px;
     margin-top: 40px; */
 
-
-
-
-  .fa-map-marker-alt{
-    font-size: 40px;
-    color: #0575e6;
-  }
-
+.fa-map-marker-alt {
+  font-size: 40px;
+  color: #0575e6;
+}

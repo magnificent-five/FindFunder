@@ -80,6 +80,7 @@
   }
   #submit{
     margin-top: 10px;
+    cursor: pointer;
   }
   
   #submit , #donateValue{
@@ -90,6 +91,12 @@
   color: white;
   background-color:#068061 ;
   border: none;
+  }
+  #donateValue{
+    border: 1px solid #068061;
+    background-color: #fff;
+    color: teal;
+    margin-top: 15px;
   }
 
 #story{

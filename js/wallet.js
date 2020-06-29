@@ -1,19 +1,17 @@
 'use strict'
 
+var walletValue = document.getElementById('walletValue');
 
-// // Constructor for wallet 
+//Constructor for wallet 
 function Wallet() {
     this.amount = 0;
 }
 
-
-if(localStorage.getItem('wallet')){
-    newWallet=JSON.parse(localStorage.getItem('wallet'));
-}
-else{
-//Declare wallet object
 var newWallet = new Wallet();
-}
+
+//Lets get the amount of my stored wallet if exist
+loadWallet();
+inMyWallet();
 
 
 // Create an event listener so that when the deposit link is clicked, the depositFunction method is invoked.
@@ -65,19 +63,22 @@ function withDrawFunction(event) {
 
 // function to save wallet
 function saveWallet() {
-
     localStorage.setItem('wallet', JSON.stringify(newWallet));
 }
 
 
 // function to update the contant of IN MY WALLET
-var myWallet=document.getElementById('in_my_wallet');
-var myWalletValue=document.createElement('p');
-myWallet.appendChild(myWalletValue);
 function inMyWallet(){
-    
-    myWalletValue.textContent=Number(newWallet.amount);
-    console.log(myWalletValue)
+    console.log(newWallet);
+    walletValue.textContent = parseInt(newWallet.amount);
+}
+
+//function to keep track of my stored wallet
+function loadWallet(){
+    if(!localStorage.getItem('wallet')){
+        return
+    }
+    newWallet = JSON.parse(localStorage.getItem('wallet'));
 }
 
 
