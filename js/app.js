@@ -1,4 +1,6 @@
+'use strict';
+import { data } from "./dummy-data.js";
 
-'use strict'
+var allProjects = [];
 
-var allProjects =[]; 
+
