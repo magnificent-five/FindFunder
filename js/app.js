@@ -1,7 +1,7 @@
+'use strict';
+import { data } from "./dummy-data.js";
 
-'use strict'
-
-var allProjects =[]; 
+var allProjects = [];
 
 var dorpDownOptionMedical= document.getElementById('Medical');
 dorpDownOptionMedical.addEventListener('click', redirectToMedical);
