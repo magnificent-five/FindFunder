@@ -1,31 +1,71 @@
-:37
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <h1>Wallet</h1>
-        <div id="first">
-            <h3>The amount</h3>
-            <input id="deposit" type="number" placeholder="Enter the amount of money (in $) ..">
-            <br>
-            <button id="btn1" type="button">Deposit</button>
-            <br>
-        </div>
-        <div id="second">
-            <h3>The amount</h3>
-            <input id="withdraw" type="number" placeholder="Enter the amount of money (in $) ..">
-            <br>
-            <button id="btn2" type="button">Withdraw</button>
-        </div>
-        <div id="in_my_wallet"></div>
-            <canvas id="myChart" width="400" height="400"></canvas>
-            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-            "
-            <script src="js/wallet.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wallet</title>
+    <link rel="shortcut icon" href="img/small-logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img src="img/logo.png" alt="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn"
+              >fundraise for
+              <i class="fas fa-chevron-down"></i>
+            </a>
+            <div class="dropdown-content">
+              <a href="#">Education</a>
+              <a href="#">Medical</a>
+              <a href="#">non-profit</a>
+            </div>
+          </li>
+          <li><a href="start-project.html">start a project</a></li>
+          <li><a href="#">about us</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a href="wallet.html">
+          <i class="fas fa-wallet"></i>
+          wallet</a
+        >
+      </div>
+    </header>
+    <main>
+      <h1>Wallet</h1>
+      <div id="first">
+        <h3>The amount</h3>
+        <input
+          id="deposit"
+          type="number"
+          placeholder="Enter the amount of money (in $) .."
+        />
+        <br />
+        <button id="btn1" type="button">Deposit</button>
+        <br />
+      </div>
+      <div id="second">
+        <h3>The amount</h3>
+        <input
+          id="withdraw"
+          type="number"
+          placeholder="Enter the amount of money (in $) .."
+        />
+        <br />
+        <button id="btn2" type="button">Withdraw</button>
+      </div>
+      <div id="in_my_wallet"></div>
+      <canvas id="myChart" width="400" height="400"></canvas>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    "
+    <script src="js/wallet.js"></script>
+  </body>
 </html>
