@@ -255,7 +255,7 @@ input {
   margin-top: 3px;
   margin-left: 150px;
 }
-/* #btn_2,#btn_1 :hover{  
+/* #fasbtn_2,#btn_1 :hover{  
     color: rgb(255, 255, 255);
     background-color: cadetblue;
     text-align: center;
@@ -264,6 +264,8 @@ input {
     transition-duration:1s;
     padding: 20px;
     margin-top: 40px; */
+
+
 
 
   .fa-map-marker-alt{
