@@ -82,7 +82,7 @@
     margin-top: 10px;
   }
   
-  #submit{
+  #submit , #donateValue{
   width: 100%;
   font-size: larger;
   height: 35px;

@@ -83,37 +83,6 @@ function inMyWallet(){
 
 
 
-// Create an event listener so that when the donate link is clicked, the donateFunction method is invoked.
-var donate = document.getElementById('btn3');
-donate.addEventListener('click', donateFunction)
-var donateAmount;
-
-function donateFunction(event) {
-// Prevent the page from reloading
-// update the amount value
-// save wallate in local storage
-// update the wallet in HTMl
-    event.preventDefault();
-    newWallet.amount -= Number(event.target.value);
-    donateAmount=Number(event.target.value);
-    saveWallet();
-    inMyWallet();
-    draw();
-
-}
-
-
-
-
-
-//Project Donate Constructor 
-var projectDonateArray = [];
-var obj = JSON.parse(localStorage.getItem('obj'));
-function projectDonate(obj){
-    this.id=thid.id;
-    thid.amount=donateAmount;
-    projectDonateArray.push(this);
-}
 
 
 
@@ -124,7 +93,7 @@ function draw() {
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: projectDonateArray.name,
+            labels: projectDonateArray[0].name,
             datasets: [{
                 label: '# of amount',
                 data: projectDonateArray.donateAmount,
