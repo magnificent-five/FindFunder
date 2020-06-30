@@ -64,7 +64,7 @@ function donateFunction(event) {
     "projectDonateArray",
     JSON.stringify(projectDonateArray)
   );
-  // draw();
+  
 }
 
 var raisedNum = parseInt(raised.textContent);
@@ -103,6 +103,7 @@ if (localStorage.getItem("projectDonateArray")) {
 function ProjectDonate(obj, donateAmount) {
   this.id = obj.id;
   this.title = obj.title;
+  this.name = obj.name;
   this.amount = donateAmount;
   projectDonateArray.push(this);
 }
