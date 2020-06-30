@@ -38,7 +38,7 @@ header div a {
   text-decoration: none;
 }
 header div a:hover {
-  color: #00f260;
+  color: #43cea2;
   transition-duration: 360ms;
 }
 
@@ -68,11 +68,11 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-  color: #00f260;
+  color: #43cea2;
   transition-duration: 360ms;
 }
 .dropdown-content a:hover {
-  color: #0575e6;
+  color: #185a9d;
   transition-duration: 360ms;
 }
 
@@ -110,8 +110,8 @@ li.dropdown {
 .main-section {
   background-image: linear-gradient(
       to left,
-      rgba(67, 206, 162, 0.8),
-      rgba(24, 90, 157, 0.8)
+      rgba(67, 206, 162, 0.9),
+      rgba(24, 90, 157, 0.9)
     ),
     url("../img/help.jpg");
 
@@ -296,7 +296,7 @@ li.dropdown {
 #vision p {
   line-height: 25px;
   text-align: center;
-  width: 80%;
+  width: 70%;
   margin: 15px auto;
   color: #646363;
   margin-bottom: 50px;
@@ -308,7 +308,6 @@ li.dropdown {
   background-color: #fff;
   padding: 50px 0;
 }
-
 
 #teamCards {
   width: 80%;
@@ -328,8 +327,6 @@ li.dropdown {
   flex-direction: column;
   align-items: center;
   color: #646363;
-  
- 
 }
 
 #teamCards div img,
@@ -337,16 +334,14 @@ li.dropdown {
 #teamCards div h6,
 #teamCards div a {
   margin: 10px 10px;
-  
 }
-#teamCards div img{
+#teamCards div img {
   margin-top: 20px;
 }
 #ourTeam .personalImage {
   border-radius: 50%;
   width: 50%;
-  height: auto;  
-
+  height: auto;
 }
 
 #teamCards a i {
@@ -354,10 +349,87 @@ li.dropdown {
   font-size: 17pt;
 }
 #teamCards a i:hover {
-  color: #185A9D;
+  color: #185a9d;
   transition-duration: 360ms;
 }
 
+/* -------------- CATEGORY PAGE -------------- */
+#projectsPreview {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 40px;
+  row-gap: 40px;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+}
+
+#projectsPreview div {
+  font-size: 30px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+  padding: 10px 10px 0 10px;
+}
+
+.imageStyle {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#projectsPreview article {
+  color: black;
+  text-decoration: none;
+  padding: 15px;
+}
+
+#projectsPreview a {
+  display: block;
+  text-decoration: none;
+}
+#projectsPreview h4 {
+  margin-bottom: 20px;
+  font-size: 12pt;
+  color: #646363;
+}
+
+#projectsPreview p {
+  font-size: 12pt;
+  color: #646363;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.fa-money-bill-alt,
+.fa-bullseye {
+  color: #43cea2;
+}
+
+#catagory-main {
+  background-image: linear-gradient(
+      to left,
+      rgba(67, 206, 162, 0.9),
+      rgba(24, 90, 157, 0.9)
+    ),
+    url("https://images.pexels.com/photos/2467396/pexels-photo-2467396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  padding: 50px 0;
+}
+
+#catagory-main .card-title {
+  color: #fff;
+}
+
+#catagory-main .line-under {
+  background-color: #fff;
+}
+#catagory-main .circle-under {
+  border-color: #fff;
+}
 /* -------------- WALLET PAGE --------------  */
 #in_my_wallet {
   color: seashell;
