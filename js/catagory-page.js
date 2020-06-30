@@ -42,3 +42,5 @@ function redirectToProjectPage(event) {
 function checkExistance(e) {
   return e.id == this;
 }
+
+
