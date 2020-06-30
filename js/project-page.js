@@ -29,6 +29,7 @@ goal.textContent = visted.goal;
 var story = document.getElementById("story");
 story.textContent = visted.story;
 
+
 // function to get back the wallet from storage
 var myWallet;
 // Create an event listener so that when the donate link is clicked, the donateFunction method is invoked.
@@ -105,12 +106,16 @@ window.onclick = function(event) {
   displayNewRaised(donateAmount);
   updateRaised();
   localStorage.setItem("wallet", JSON.stringify(myWallet));
-  var newProjectDonate = new ProjectDonate(visted, donateAmount);
-  localStorage.setItem(
-    "projectDonateArray",
-    JSON.stringify(projectDonateArray)
-  );
-  
+
+  //check if we have projectDonateArray in local storage 
+  if (localStorage.getItem("projectDonateArray")) {
+    projectDonateArray = JSON.parse(localStorage.getItem("projectDonateArray"));
+  }
+
+  //update the amount of donate for elemnts in projectDonateArray
+  updateAmount(donateAmount);
+  localStorage.setItem("projectDonateArray", JSON.stringify(projectDonateArray));
+
 }
 
 var raisedNum = parseInt(raised.textContent);
@@ -138,11 +143,16 @@ function checkForObject(e) {
   return e.id == this;
 }
 
+
+
+
 // creat new arry
 var projectDonateArray = [];
 //check if there is project array in storage
+
 if (localStorage.getItem("projectDonateArray")) {
   projectDonateArray = JSON.parse(localStorage.getItem("projectDonateArray"));
+
 }
 
 //Project Donate Constructor
@@ -152,4 +162,27 @@ function ProjectDonate(obj, donateAmount) {
   this.name = obj.name;
   this.amount = donateAmount;
   projectDonateArray.push(this);
+}
+
+
+
+function updateAmount(donateAmount) {
+
+  if (projectDonateArray.some(e => e.id === visted.id)) {
+    /* projectDonateArray contains the element we're looking for */
+
+    //edit amount for the element if we have it in projectDonateArray
+    console.log(localStorage.getItem("projectDonateArray"))
+    for (var i = 0; i < projectDonateArray.length; i++) {
+      if (projectDonateArray[i].id == visted.id) {
+        projectDonateArray[i].amount += donateAmount;
+      }
+    }
+  }
+
+  //if we don't have the element in projectDonateArray go and creat it
+  else {
+    var newProjectDonate = new ProjectDonate(visted, donateAmount);
+
+  } localStorage.setItem("projectDonateArray", JSON.stringify(projectDonateArray));
 }

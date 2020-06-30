@@ -99,7 +99,7 @@ draw();
 
 //Function for result of donation in chart
 function draw() {
-    //check if there is a donation
+  //check if there is a donation
   if (!localStorage.getItem("projectDonateArray")) {
     return;
   }
