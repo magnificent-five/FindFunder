@@ -21,7 +21,8 @@ color: black;
     
     width: 300px;
     height: 200px;
-    border: 1px solid cadetblue
+    border: 1px solid cadetblue;
+    object-fit: scale-down;
     
   }
   .slideshow-container {
@@ -97,7 +98,7 @@ color: black;
   .para img {
     width: 50%;
     height:  400px;
-    
+    object-fit: scale-down;
   }
 
   
