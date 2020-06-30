@@ -110,8 +110,8 @@ li.dropdown {
 .main-section {
   background-image: linear-gradient(
       to left,
-      rgba(67, 206, 162, 0.7),
-      rgba(24, 90, 157, 0.7)
+      rgba(67, 206, 162, 0.8),
+      rgba(24, 90, 157, 0.8)
     ),
     url("../img/help.jpg");
 
@@ -228,11 +228,13 @@ li.dropdown {
   margin-bottom: 15px;
   padding: 15px 15px;
   box-sizing: border-box;
+  color: #646363;
 }
 
 #project-form input[type="text"]:focus,
 #project-form input[type="number"]:focus,
-#project-form textarea:focus {
+#project-form textarea:focus,
+#project-form select {
   box-shadow: 0 0 5px #43cea2;
   outline: 0 none;
 }
@@ -247,6 +249,7 @@ li.dropdown {
   border-color: #43cea2;
   padding: 15px 15px;
   box-sizing: border-box;
+  color: #646363;
 }
 #project-form select {
   width: 100%;
@@ -255,6 +258,7 @@ li.dropdown {
   background-color: #f7f7ff;
   margin-top: 7px;
   padding: 15px 10px;
+  color: #646363;
 }
 
 /* -------------- WALLET PAGE --------------  */
