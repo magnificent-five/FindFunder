@@ -1,0 +1,29 @@
+h2{
+    font-size: 300%;
+}
+#formCreat {
+    color: white;   
+}
+#creat {
+    width: 300px;
+    font-size: larger;
+    height: 45px;
+    border-radius: 5px;
+    color: white;
+    background-color:#068061 ;
+    border: none;
+    font-size: 150%;
+    margin-left: 50px;
+}
+#submitCreat{
+    margin-top: 30px;
+    width: 200px;
+    font-size: larger;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    background-color:#068061 ;
+    border: none;
+    font-size: 150%;
+    margin-left: 200px;
+}

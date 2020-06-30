@@ -3,7 +3,8 @@
 var walletValue = document.getElementById("walletValue");
 
 //Constructor for wallet
-function Wallet() {
+function Wallet(name) {
+  this.name=name;
   this.amount = 0;
 }
 
