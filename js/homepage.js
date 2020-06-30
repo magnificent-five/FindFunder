@@ -24,6 +24,7 @@ for (var i = 0; i < 6; i++) {
     h4.textContent = allprojects[i].title;
     article.appendChild(h4);
     var p = document.createElement("p");
+    p.setAttribute("class","card-info")
     p.innerHTML = `<i class="far fa-money-bill-alt"></i> <span id="raised">${allprojects[i].raised}</span> Raised of <i class="fas fa-bullseye"></i> <span id="goal">${allprojects[i].goal}</span>`;
     article.appendChild(p);
     link.appendChild(article);
