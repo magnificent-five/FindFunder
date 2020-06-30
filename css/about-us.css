@@ -1,0 +1,84 @@
+#ourTeam{
+    width: 100%;
+    margin: 40px auto 40px auto;
+    padding-bottom: 100px;
+    text-align: center;
+    overflow: auto;
+    background-color: #f1f9ff;
+    color: #2699fb;
+}
+#ourTeam h3{
+    color: gray;
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+#teamCards{
+    width: 95%;
+    margin: auto;
+    /* background-color: crimson; */
+    padding: 5px;
+    overflow: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#teamCards div{
+    float: right;
+    width: 17%;
+    background-color: white;
+    padding-bottom: 10px;
+    /* margin: 5px 10px 5px 10px; */
+}
+
+#teamCards div img , #teamCards div h5, #teamCards div h6, #teamCards div a{
+    margin-top: 10px;
+    display: block;
+}
+#ourTeam .personalImage{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+#teamCards a i{
+    color: #2699fb;
+}
+
+/*vision section */
+
+#vision{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+    font-size: x-large;
+    color: rgb(172, 167, 167);
+}
+#vision h3{
+    color: gray;
+    font-size: xx-large;
+    font-weight: 800;
+}
+
+/* big image section */
+#bigImage{
+    margin-top: 10px;
+    text-align: center;
+    color: gray;
+    font-size: xx-large;
+    font-weight: 800;
+    height: 550px;
+    background-image: url(../img/aboutUs.jpg);
+    /* background-image: url(https://targetcareers.co.uk/sites/targetcareers.co.uk/files/public/styles/header_1500x550/public/field/image/How-do-I-get-into-charity-work.jpg?itok=lEZMlXlk); */
+}
+
+#bigImage h2{
+    position: relative;
+    top: 280px;
+    right: 17px;
+}
