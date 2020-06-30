@@ -46,9 +46,11 @@ formUser.addEventListener('submit', inputname);
 function inputname(event) {
 
     event.preventDefault();
+    if(localStorage.getItem('walletsArray')){
+
+        getMyWallet();
+    }
     var name = event.target.inputName.value;
-
-
     var CreatWalletnew = new CreatWallet(name);
     console.log(name);
     saveMyWallet();
