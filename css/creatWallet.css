@@ -2,9 +2,10 @@ h2{
     font-size: 300%;
 }
 #formCreat {
-    color: white;   
+    color: white; 
+    margin: 30px;  
 }
-#creat {
+#creat  {
     width: 300px;
     font-size: larger;
     height: 45px;
@@ -15,6 +16,29 @@ h2{
     font-size: 150%;
     margin-left: 50px;
 }
+#logins{
+    width: 200px;
+    font-size: larger;
+    height: 40px;
+    border-radius: 5px;
+    color: white;
+    background-color:#068061 ;
+    border: none;
+    font-size: 150%;
+    margin-left: 50px;
+}
+#loginName , #inputName{
+    width: 200px;
+    font-size: larger;
+    height: 30px;
+    border-radius: 5px;
+    border:solid #068061 ;
+    border: none;
+    font-size: 150%;
+    margin: 20px;
+    
+}
+
 #submitCreat{
     margin-top: 30px;
     width: 200px;
@@ -25,5 +49,12 @@ h2{
     background-color:#068061 ;
     border: none;
     font-size: 150%;
-    margin-left: 200px;
+    margin: 20px;
+   
+}
+
+#formUser{
+    margin: 50px;
+    
+    width: 400px;
 }
