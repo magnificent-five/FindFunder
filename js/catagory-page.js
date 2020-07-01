@@ -24,7 +24,7 @@ for (var i = 0; i < loadInfo2.length; i++) {
   h4.textContent = loadInfo2[i].title;
   article.appendChild(h4);
   var p = document.createElement("p");
-  p.innerHTML = `<i class="far fa-money-bill-alt"></i> <span id="raised">${loadInfo2[i].raised}</span> Raised of <i class="fas fa-bullseye"></i> <span id="goal">${loadInfo2[i].goal}</span>`;
+  p.innerHTML = `<i class="far fa-money-bill-alt"></i> <span id="raised">$${loadInfo2[i].raised}</span> Raised of <i class="fas fa-bullseye"></i> <span id="goal">$${loadInfo2[i].goal}</span>`;
   article.appendChild(p);
   link.appendChild(article);
   div.appendChild(link);
