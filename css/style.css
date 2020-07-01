@@ -895,6 +895,7 @@ footer div .fab:hover {
   outline: 0 none;
 }
 
+
 #btn1,
 #btn2 {
   display: block;
@@ -918,6 +919,7 @@ footer div .fab:hover {
 
 #btn1:hover,
 #btn2:hover {
+
   background: rgb(24, 90, 157);
   background: linear-gradient(
     45deg,
@@ -925,6 +927,11 @@ footer div .fab:hover {
     rgba(67, 206, 162, 1) 100%
   );
   transition-duration: 360ms;
+}
+
+#btn1:focus,
+#btn2:focus {
+  outline: 0 none;
 }
 
 #inputWallet {
