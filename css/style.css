@@ -804,66 +804,152 @@ footer div .fab:hover{
   border-color: #fff;
 }
 /* -------------- WALLET PAGE --------------  */
-#in_my_wallet {
-  color: seashell;
-  background-color: dodgerblue;
-  width: 500px;
-  height: 500px;
-  margin-left: 828px;
-  position: relative;
-  top: -200px;
-}
 
-#walletValue {
+.imageBackground{
+  background-image: linear-gradient(
+    to left,
+    rgba(67, 206, 162, 0.9),
+    rgba(24, 90, 157, 0.9)
+  ),
+  url("../img/help.jpg");
+
+background-size: cover;
+color: white;
+padding: 100px 0;
+}
+#h1wallet{
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
   font-size: 30pt;
+  font-weight: bold;
+  
+  
 }
-h1 {
-  color: dimgray;
+#titlewallet .card-title {
+  color: #fff;
 }
-#btn1,
-#btn2 {
-  color: rgb(255, 255, 255);
-  background-color: dodgerblue;
+
+#titlewallet .line-under {
+  background-color: #fff;
+}
+#titlewallet .circle-under {
+  border-color: #fff;
+}
+.flex-container{
+  display: flex;
+  margin-top: 30px;
+}
+#amountBottun{
+width: 50%;
+margin-left: 50px;
+margin-top: 40px;
+
+}
+#first h3 , #second h3{
+  font-size: 15pt;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  
+}
+#deposit , #withdraw {
+  float: left;
+  
+  border: solid #43cea2 1px;
+  border-radius: 5px;
+  background-color: #f7f7ff;
+   margin-bottom: 15px;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  color: #646363;
+}
+
+#btn1 , #btn2 {
+ margin-left: 20px ;
+ width: 200px;
+ margin-bottom: 50px;
+ border: 0;
+ border-radius: 5px;
+ font-size: 10pt;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  padding: 15px 15px;
+  background-color: rgb(67, 206, 162) ;
+
+}
+
+#btn1:hover , #btn2:hover {
+  color: #646363 ;
+  background-color: #d3dfe7;
+  transition-duration: 360ms;
+}
+
+#in_my_wallet {
+  
+  width:50% ;
+  height: 500px;
+  margin-right: 50px;
+}
+
+#inputWallet {
+  width: 50%;
+  height: 300px;
+  margin-top: 30px;
+  margin-left: 200px;
+  font-size: 30pt;
+  font-weight: bold;
+  border: solid #43cea2 2px;
+  border-radius: 5px;
+  background-color: #f7f7ff;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  color:  #646363; 
+}
+#walletValue{
+  font-family: Verdana, Geneva, Tahoma, sans-serif  ;
   text-align: center;
-  font-size: larger;
-  padding: 20px;
-  margin-top: 40px;
-  transition: 3s;
-  /* margin-left: 100px; */
+  margin-top: 100px;
 }
-h3 {
-  margin: 20px;
-  /* margin-left: 100px; */
-  color: deepskyblue;
-}
-input {
-  border: 2px solid dodgerblue;
+#in_wallet{
+  text-align: center;
+  margin-top:15px ;
 }
 
-#first {
-  margin-left: 399px;
-  position: relative;
-  top: 185px;
-}
-#second {
-  margin-top: 3px;
-  margin-left: 150px;
-}
-/* #fasbtn_2,#btn_1 :hover{  
-    color: rgb(255, 255, 255);
-    background-color: cadetblue;
-    text-align: center;
-    font-size: larger;
-    border-radius: 5px;
-    transition-duration:1s;
-    padding: 20px;
-    margin-top: 40px; */
 
-.fa-map-marker-alt {
-  font-size: 40px;
-  color: #0575e6;
+
+
+
+.chart p{
+  margin-top: 60px;
+  text-align: center;
+  color: #646363;
+  font-size: 20pt;
+  font-weight: bold;
 }
+
+
+.chart .card-title {
+  color: ##43cea2;
+}
+
+.chart .line-under {
+  background-color: ##43cea2;
+}
+.chart .circle-under {
+  border-color: ##43cea2;
+}
+
+
+
 
 #myChart {
+  background-color: #f7f7ff;
   margin: 0 auto;
 }
+
