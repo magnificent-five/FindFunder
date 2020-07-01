@@ -123,6 +123,7 @@
 }
 #myBtn:hover,
 #myBtn:focus {
+  outline: 0 none;
   background: rgb(24, 90, 157);
   background: linear-gradient(
     45deg,
