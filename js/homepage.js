@@ -37,7 +37,7 @@ var perviewsection = document.getElementById("section2");
 
 
 function redirectToProjectPage(event) {
-  var visted = allprojects.find(checkExistance, this.id);
+  var visted = allProjects.find(checkExistance, this.id);
   localStorage.setItem("visted", JSON.stringify(visted));
 }
 function checkExistance(e) {
