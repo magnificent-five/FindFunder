@@ -28,15 +28,6 @@ function formCreatFunction(event) {
 
 
 
-//check if I have wallets array in storage
-if (localStorage.getItem('walletsArray')) {
-    getMyWallet();
-    if (walletsArray.length > 2) {
-
-        render();
-    }
-}
-
 
 
 
@@ -46,7 +37,7 @@ formUser.addEventListener('submit', inputname);
 function inputname(event) {
 
     event.preventDefault();
-    if(localStorage.getItem('walletsArray')){
+    if (localStorage.getItem('walletsArray')) {
 
         getMyWallet();
     }
@@ -67,7 +58,14 @@ logIn.addEventListener('submit', functionlogin);
 function functionlogin(event) {
 
     event.preventDefault();
-    getMyWallet();
+
+    //check if I have wallets array in storage
+    if (localStorage.getItem('walletsArray')) {
+        getMyWallet();
+
+
+    }
+    
     var username = event.target.loginName.value;
     if (walletsArray.some(e => e.name === username)) {
         /* walletsArray contains the element we're looking for */
@@ -104,17 +102,6 @@ function getMyWallet() {
     walletsArray = JSON.parse(localStorage.getItem('walletsArray'));
 }
 
-
-
-
-//render function to give me lasts three wallets
-function render() {
-
-    formOption.innerHTML += `<input id="first1" type="submit" value="${walletsArray[walletsArray.length - 3].name}" > <br>`
-    formOption.innerHTML += `<input id="secound" type="submit" value="${walletsArray[walletsArray.length - 2].name}" > <br>`
-    formOption.innerHTML += `<input id="third" type="submit" value="${walletsArray[walletsArray.length - 1].name}" > <br>`
-
-}
 
 
 
