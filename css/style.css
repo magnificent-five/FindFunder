@@ -250,8 +250,8 @@ li.dropdown {
 #latest-project #section2 {
   display: grid;
   grid-template-columns: auto auto auto;
-  column-gap: 40px;
-  row-gap: 40px;
+  column-gap: 60px;
+  row-gap: 60px;
   text-align: center;
   margin: 0 auto;
   width: 80%;
@@ -259,6 +259,9 @@ li.dropdown {
 }
 
 #latest-project #section2 div {
+  display: inline-block;
+  vertical-align: middle;
+
   font-size: 30px;
   text-align: center;
   background-color: #fff;
@@ -266,8 +269,18 @@ li.dropdown {
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
   padding: 10px 10px 0 10px;
-}
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
 
+}
+#latest-project #section2 div:hover, #latest-project #section2 div:focus, #latest-project #section2 div:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
 #latest-project #section2 img {
   width: 100%;
   height: 280px;
@@ -301,6 +314,10 @@ li.dropdown {
   display: block;
   text-decoration: none;
 }
+
+  
+  
+
 
 #stories {
   padding: 50px 0;
@@ -617,8 +634,8 @@ li.dropdown {
 #projectsPreview {
   display: grid;
   grid-template-columns: auto auto auto;
-  column-gap: 40px;
-  row-gap: 40px;
+  column-gap: 60px;
+  row-gap: 60px;
   text-align: center;
   margin: 0 auto;
   width: 80%;
@@ -626,6 +643,9 @@ li.dropdown {
 }
 
 #projectsPreview div {
+  
+  display: inline-block;
+  vertical-align: middle;
   font-size: 30px;
   text-align: center;
   background-color: #fff;
@@ -633,14 +653,27 @@ li.dropdown {
   overflow: hidden;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
   padding: 10px 10px 0 10px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+#projectsPreview div:hover, #projectsPreview div:focus, #projectsPreview div:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .imageStyle {
-  width: 100%;
   height: 280px;
   object-fit: cover;
   border-radius: 5px;
+  width: 100%;
 }
+
+
 
 #projectsPreview article {
   text-decoration: none;

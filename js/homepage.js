@@ -9,6 +9,7 @@ var perviewsection = document.getElementById("section2");
 for (var i = 0; i < 3; i++) {
   var div = document.createElement("div");
   div.id = i;
+  div.setAttribute('class' , 'styleCards')
   var link = document.createElement("a");
   link.addEventListener("click", redirectToProjectPage);
   link.setAttribute("href", "project-page.html");

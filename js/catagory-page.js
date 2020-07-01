@@ -14,7 +14,7 @@ for (var i = 0; i < loadInfo2.length; i++) {
   var link = document.createElement("a");
   link.addEventListener("click", redirectToProjectPage);
   link.setAttribute("href", "project-page.html");
-  link.setAttribute("id", loadInfo2[i].id);
+  link.setAttribute("id", loadInfo2[i].id );
   var img = document.createElement("img");
   img.setAttribute("src", loadInfo2[i].image);
   img.setAttribute("class", "imageStyle");
