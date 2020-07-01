@@ -281,6 +281,11 @@ li.dropdown {
   color: #646363;
   margin-top: 15px;
   padding: 0 20px;
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #latest-project #section2 p {
@@ -346,6 +351,11 @@ li.dropdown {
   line-height: 25px;
   text-align: left;
   color: #646363;
+  font-size: 10pt;
+  font-style: italic;
+}
+#stories #section3 div p:last-child {
+  font-style: normal;
 }
 
 #stories #section3 img {
@@ -645,6 +655,11 @@ li.dropdown {
   margin-bottom: 20px;
   font-size: 12pt;
   color: #646363;
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 #projectsPreview p {
