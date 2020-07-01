@@ -839,7 +839,7 @@ footer div .fab:hover {
 
   background-size: cover;
   color: white;
-  padding: 50px 0;
+  padding: 50px 50px;
 }
 
 #titlewallet .card-title {
@@ -852,15 +852,17 @@ footer div .fab:hover {
 #titlewallet .circle-under {
   border-color: #fff;
 }
-.flex-container {
+
+.grid-container {
+  justify-content: center;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 35% 35%;
   column-gap: 60px;
-  width: 70%;
-  margin: 50px auto;
+  width: 100%;
+  margin: 50px 0;
 }
 #amountBottun {
-  width: 100%;
+  /* width: 100%; */
   background-color: #fff;
   border-radius: 5px;
   padding: 20px;
@@ -869,10 +871,13 @@ footer div .fab:hover {
 #first h3,
 #second h3 {
   font-size: 15pt;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
+  font-weight: 600;
+  color: #646363;
+  margin: 20px 0;
+  text-align: center;
 }
+
+
 #deposit,
 #withdraw {
   width: 70%;
@@ -885,12 +890,18 @@ footer div .fab:hover {
   color: #646363;
   display: block;
 }
+#deposit:focus,
+#withdraw:focus {
+  box-shadow: 0 0 5px #43cea2;
+  outline: 0 none;
+}
 
 #btn1,
 #btn2 {
   display: block;
   width: 70%;
   margin: 0 auto;
+  margin-bottom: 30px;
   border: 0;
   border-radius: 5px;
   font-size: 10pt;
@@ -898,13 +909,22 @@ footer div .fab:hover {
   color: white;
   cursor: pointer;
   padding: 15px 15px;
-  background-color: #43cea2;
+  background: rgb(24, 90, 157);
+  background: linear-gradient(
+    90deg,
+    rgba(24, 90, 157, 1) 0%,
+    rgba(67, 206, 162, 1) 100%
+  );
 }
 
 #btn1:hover,
 #btn2:hover {
-  color: #646363;
-  background-color: #d3dfe7;
+  background: rgb(24, 90, 157);
+  background: linear-gradient(
+    45deg,
+    rgba(24, 90, 157, 1) 0%,
+    rgba(67, 206, 162, 1) 100%
+  );
   transition-duration: 360ms;
 }
 
@@ -916,22 +936,25 @@ footer div .fab:hover {
   font-weight: bold;
   border-radius: 5px;
   background-color: #fff;
-  box-sizing: border-box;
   color: #646363;
-  width: 100%;
-  height: 400px;
+  height: 100%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #walletValue {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  color: #185a9d;
 }
 #in_wallet {
-  margin-top: 10px;
+  margin-top: 20px;
   font-weight: 200;
   text-align: center;
-  font-size: 20pt;
+  font-size: 15pt;
+  
+}
+.chart{
+padding: 50px 0;
 }
 
 .chart p {

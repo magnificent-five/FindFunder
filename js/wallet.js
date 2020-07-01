@@ -43,29 +43,29 @@ function withDrawFunction(event) {
   // update the wallet in HTMl
   event.preventDefault();
   if (newWallet.amount < withdrawInput.value) {
-   // Get the modal
-var modal = document.getElementById("myModal");
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-// open the modal 
-  modal.style.display = "block";
+    // open the modal
+    modal.style.display = "block";
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
     //alert("you don't have enough money");
   } else {
     newWallet.amount -= Number(withdrawInput.value);
@@ -83,7 +83,7 @@ function saveWallet() {
 // function to update the contant of IN MY WALLET
 function inMyWallet() {
   console.log(newWallet);
-  walletValue.textContent ="$"+parseInt(newWallet.amount);
+  walletValue.textContent = "$" + parseInt(newWallet.amount);
 }
 
 //function to keep track of my stored wallet
@@ -93,7 +93,6 @@ function loadWallet() {
   }
   newWallet = JSON.parse(localStorage.getItem("wallet"));
 }
-
 
 draw();
 
@@ -119,11 +118,11 @@ function draw() {
       //labelThicknees:5,
       datasets: [
         {
-          barThickness: 20,
-          label: "# of amount",
+          barThickness: 40,
+          label: "Amount of Donation",
           data: amountsArr,
-          backgroundColor: '#cbd0d3',
-          borderColor: 'black',
+          backgroundColor: "rgba(67,206,162, .7)",
+          borderColor: "#185A9D",
           borderWidth: 1,
         },
       ],
@@ -136,7 +135,7 @@ function draw() {
       legend: {
         labels: {
           // This more specific font property overrides the global property
-          fontColor: "black",
+          fontColor: "#696969",
         },
       },
 
@@ -146,9 +145,8 @@ function draw() {
             ticks: {
               beginAtZero: true,
               precision: 1,
-              stepSize: 1,
-
-              fontColor: "black",
+              stepSize: 100,
+              fontColor: "#696969",
             },
           },
         ],
@@ -156,7 +154,7 @@ function draw() {
         xAxes: [
           {
             ticks: {
-              fontColor: "black",
+              fontColor: "#696969",
             },
           },
         ],
