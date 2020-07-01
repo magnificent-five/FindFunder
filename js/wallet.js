@@ -145,7 +145,7 @@ function draw() {
             ticks: {
               beginAtZero: true,
               precision: 1,
-              stepSize: 50,
+              stepSize: 100,
               fontColor: "#696969",
             },
           },
