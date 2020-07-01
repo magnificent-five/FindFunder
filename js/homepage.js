@@ -13,6 +13,7 @@ for (var i = 0; i < 3; i++) {
   link.addEventListener("click", redirectToProjectPage);
   link.setAttribute("href", "project-page.html");
   link.setAttribute("id", allprojects[i].id);
+  
   var img = document.createElement("img");
   img.setAttribute("src", allprojects[i].image);
   img.setAttribute("class", "imageStyle");
@@ -31,9 +32,13 @@ for (var i = 0; i < 3; i++) {
 }
 
 function redirectToProjectPage(event) {
-  var visted = loadInfo2.find(checkExistance, this.id);
+  var visted = allprojects.find(checkExistance, this.id);
   localStorage.setItem("visted", JSON.stringify(visted));
 }
+function checkExistance(e) {
+  return e.id == this;
+}
+
 
 var slideIndex = 0;
 showSlides();
