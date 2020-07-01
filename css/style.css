@@ -877,7 +877,6 @@ footer div .fab:hover {
   text-align: center;
 }
 
-
 #deposit,
 #withdraw {
   width: 70%;
@@ -951,10 +950,9 @@ footer div .fab:hover {
   font-weight: 200;
   text-align: center;
   font-size: 15pt;
-  
 }
-.chart{
-padding: 50px 0;
+.chart {
+  padding: 50px 0;
 }
 
 .chart p {
@@ -1040,12 +1038,26 @@ padding: 50px 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#raised {
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 20px;
-  margin-bottom: 20px;
+#donatediv .fa-bullseye {
+  font-size: 15pt;
+}
+#raisedDiv {
+  margin: 15px 0;
+}
+#raisedDiv .fa-money-bill-alt {
+  font-size: 15pt;
+}
+#raisedDiv span {
   font-size: 15pt;
   color: #646363;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#raisedDiv #raised {
+  display: inline;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  color: #185a9d;
 }
 
 #iconName,
