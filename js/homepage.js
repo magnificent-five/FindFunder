@@ -6,7 +6,7 @@ console.log(allprojects);
 
 var perviewsection = document.getElementById("section2");
 
-for (var i = 0; i < 6; i++) {
+for (var i = 0; i < 3; i++) {
   var div = document.createElement("div");
   div.id = i;
   var link = document.createElement("a");
