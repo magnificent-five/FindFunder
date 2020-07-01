@@ -83,7 +83,7 @@ function saveWallet() {
 // function to update the contant of IN MY WALLET
 function inMyWallet() {
   console.log(newWallet);
-  walletValue.textContent = parseInt(newWallet.amount);
+  walletValue.textContent ="$"+parseInt(newWallet.amount);
 }
 
 //function to keep track of my stored wallet
@@ -116,11 +116,13 @@ function draw() {
     type: "bar",
     data: {
       labels: namesArr,
+      //labelThicknees:5,
       datasets: [
         {
+          barThickness: 20,
           label: "# of amount",
           data: amountsArr,
-          backgroundColor: 'red',
+          backgroundColor: '#cbd0d3',
           borderColor: 'black',
           borderWidth: 1,
         },
