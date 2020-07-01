@@ -1,15 +1,17 @@
 "use strict";
 
-var walletValue = document.getElementById("walletValue");
+// var walletValue = document.getElementById("walletValue");
 
-//Constructor for wallet
-function Wallet() {
-  this.amount = 0;
-}
+// //Constructor for wallet
+// function Wallet(name) {
+//   this.name=name;
+//   this.amount = 0;
+// }
 
-var newWallet = new Wallet();
+// var currentWallet = new Wallet();
 
 //Lets get the amount of my stored wallet if exist
+var currentWallet = [];
 loadWallet();
 inMyWallet();
 
@@ -25,10 +27,12 @@ function depositFunction(event) {
   // save wallate in local storage
   // update the wallet in HTMl
   event.preventDefault();
-  newWallet.amount += Number(depositInput.value);
-  console.log(newWallet.amount);
+  loadWallet();
+  currentWallet.amount += Number(depositInput.value);
+  console.log(currentWallet.amount);
   saveWallet();
   inMyWallet();
+  updatewallets();
 }
 
 // Create an event listener so that when the withDraw link is clicked, the withDrawFunction method is invoked.
@@ -42,7 +46,11 @@ function withDrawFunction(event) {
   // save wallate in local storage
   // update the wallet in HTMl
   event.preventDefault();
-  if (newWallet.amount < withdrawInput.value) {
+  loadWallet();
+  // if (currentWallet.amount < withdrawInput.value) {
+  //   alert("you don't have enough money");
+
+  if (currentWallet.amount < withdrawInput.value) {
     // Get the modal
     var modal = document.getElementById("myModal");
 
@@ -67,31 +75,34 @@ function withDrawFunction(event) {
       }
     };
     //alert("you don't have enough money");
+
   } else {
-    newWallet.amount -= Number(withdrawInput.value);
+    currentWallet.amount -= Number(withdrawInput.value);
   }
-  console.log(newWallet.amount);
+  console.log(currentWallet.amount);
   saveWallet();
   inMyWallet();
+  updatewallets();
 }
+//}
 
 // function to save wallet
 function saveWallet() {
-  localStorage.setItem("wallet", JSON.stringify(newWallet));
+  localStorage.setItem("currentWallet", JSON.stringify(currentWallet));
 }
 
 // function to update the contant of IN MY WALLET
 function inMyWallet() {
-  console.log(newWallet);
-  walletValue.textContent = "$" + parseInt(newWallet.amount);
+  console.log(currentWallet);
+  walletValue.textContent = parseInt(currentWallet.amount);
 }
 
 //function to keep track of my stored wallet
 function loadWallet() {
-  if (!localStorage.getItem("wallet")) {
+  if (!localStorage.getItem("currentWallet")) {
     return;
   }
-  newWallet = JSON.parse(localStorage.getItem("wallet"));
+  currentWallet = JSON.parse(localStorage.getItem("currentWallet"));
 }
 
 draw();
@@ -161,4 +172,18 @@ function draw() {
       },
     },
   });
+}
+
+
+//function to updat the wallet in wallets array
+function updatewallets() {
+  //seclect the wallet from wallets array and update it
+  var walletsArray = JSON.parse(localStorage.getItem("walletsArray"));
+  for (var i = 0; i < walletsArray.length; i++) {
+    if (walletsArray[i].name == currentWallet.name) {
+      walletsArray[i].amount = currentWallet.amount;
+    }
+  }
+  //  }
+  localStorage.setItem("walletsArray", JSON.stringify(walletsArray));
 }

@@ -877,6 +877,7 @@ footer div .fab:hover {
   text-align: center;
 }
 
+
 #deposit,
 #withdraw {
   width: 70%;
@@ -919,7 +920,6 @@ footer div .fab:hover {
 
 #btn1:hover,
 #btn2:hover {
-
   background: rgb(24, 90, 157);
   background: linear-gradient(
     45deg,
