@@ -64,9 +64,8 @@
   
   </div>
 
-    <main>
-        <h2 id="title">
-            
+    <main id='project-page-main'>
+        <h2 id="title">  
         </h2>
         <div class='img-info'>
             <div id='projectImg'>
@@ -74,13 +73,14 @@
                     src=''>
             </div>
             <div id="information">
-                <p id='bkcolor'></p>
+                <div id='bkcolor1'></div>
                 <div id='donatediv'>
-                    <h4 id='donate'></h4>
-                    <i class="fas fa-hand-holding-usd"></i>
+                   <span>$</span> <h4 id='donate'></h4>
+                    <i class="far fa-money-bill-alt"></i>
                 </div>
-                <p id='raised'> </p>
-                <hr>
+               
+                <p id='raised'></p>
+                <div id='bkcolor2'></div>
                 <div id='iconName'>
                     <i class="far fa-user"></i>
                     <p id='name'></p>
@@ -90,9 +90,9 @@
                     <p id='location'></p>
                 </div>
                 <form id="form">
-                    <lagened>The amount of donation </lagened>
+                    <legend>The amount of donation </legend>
                     <fieldset id="fieldset"></fieldset>
-                    <input id="donateValue" type="number" placeholder="Enter number of donation">
+                    <input id="donateValue" type="number">
                     <br>
                     <input id='submit' type="submit" value='DONATE'>
                     </fieldset>
