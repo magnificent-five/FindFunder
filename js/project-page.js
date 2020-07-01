@@ -43,16 +43,72 @@ function donateFunction(event) {
   // update the wallet in HTMl
   event.preventDefault();
   //check if you have a wallet
+<<<<<<< HEAD
   if (!localStorage.getItem("currentWallet")) {
     alert("You haven't add a wallet yet");
+=======
+  if (!localStorage.getItem("wallet")) {
+       // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// open the modal 
+  modal.style.display = "block";
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    //alert("You haven't add a wallet yet");
+>>>>>>> 8dcd397b04b62881c09c5d98c3fc082b0b238247
     return;
   }
   currentWallet = JSON.parse(localStorage.getItem("currentWallet"));
   var donateAmount = Number(event.target.donateValue.value);
 
   //check if you have enough money in the wallet
+<<<<<<< HEAD
   if (donateAmount > currentWallet.amount) {
     alert("You don't have enough money");
+=======
+  if (donateAmount > myWallet.amount) {
+       // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// open the modal 
+  modal.style.display = "block";
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+    //alert("You don't have enough money");
+>>>>>>> 8dcd397b04b62881c09c5d98c3fc082b0b238247
     return;
   }
   currentWallet.amount -= donateAmount;

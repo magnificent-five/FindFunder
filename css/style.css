@@ -38,7 +38,7 @@ header div a {
   text-decoration: none;
 }
 header div a:hover {
-  color: #00f260;
+  color: #43cea2;
   transition-duration: 360ms;
 }
 
@@ -54,6 +54,7 @@ ul {
 
 li {
   float: left;
+  list-style: none;
 }
 
 li a,
@@ -67,11 +68,11 @@ li a,
 
 li a:hover,
 .dropdown:hover .dropbtn {
-  color: #00f260;
+  color: #43cea2;
   transition-duration: 360ms;
 }
 .dropdown-content a:hover {
-  color: #0575e6;
+  color: #185a9d;
   transition-duration: 360ms;
 }
 
@@ -104,13 +105,273 @@ li.dropdown {
   display: block;
 }
 
+/* -------------- HOME PAGE -------------- */
+#home-main {
+  background-size: cover;
+}
+
+.slideshow-container {
+  max-width: 100%;
+  height: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  max-width: 100%;
+  height: 600px;
+  position: relative;
+  display: none;
+}
+.over {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  background-color: black;
+  /* background: rgb(96,102,107);
+  background: linear-gradient(90deg, rgba(96,102,107,1) 0%, rgba(67,206,162,1) 100%); */
+}
+
+.mySlides img {
+  max-width: 100%;
+  height: 600px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Caption text */
+.mySlides .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 25pt;
+
+  width: 100%;
+  text-align: center;
+}
+.mySlides .text h2 {
+  font-size: 25pt;
+  font-weight: bold;
+}
+.mySlides .text p {
+  margin-top: 20px;
+  font-size: 15pt;
+}
+
+.mySlides .text button {
+  border: 0;
+  border-radius: 5px;
+  background-color: #36a884;
+  /* background: rgb(24, 90, 157);
+  background: linear-gradient(
+    90deg,
+    rgba(24, 90, 157, 1) 0%,
+    rgba(67, 206, 162, 1) 100%
+  ); */
+  font-size: 10pt;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  padding: 12px 50px;
+  margin-top: 30px;
+  margin-right: 50px;
+}
+
+.mySlides .text button:focus {
+  outline: 0 none;
+}
+.mySlides .text button:hover {
+  background-color: #185a9d;
+  /* background: rgb(24, 90, 157);
+  background: linear-gradient(
+    45deg,
+    rgba(24, 90, 157, 1) 0%,
+    rgba(67, 206, 162, 1) 100%
+  ); */
+  transition-duration: 360ms;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#latest-project {
+  padding: 50px 0;
+  background-image: linear-gradient(
+      to left,
+      rgba(67, 206, 162, 0.9),
+      rgba(24, 90, 157, 0.9)
+    ),
+    url("../img/help.jpg");
+  padding-bottom: 100px;
+}
+
+#latest-project .card-title {
+  color: #fff;
+}
+
+#latest-project .line-under {
+  background-color: #fff;
+}
+#latest-project .circle-under {
+  border-color: #fff;
+}
+
+#latest-project #section2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 40px;
+  row-gap: 40px;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+}
+
+#latest-project #section2 div {
+  font-size: 30px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+  padding: 10px 10px 0 10px;
+}
+
+#latest-project #section2 img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#latest-project #section2 h4 {
+  margin-bottom: 20px;
+  font-size: 12pt;
+  color: #646363;
+  margin-top: 15px;
+  padding: 0 20px;
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#latest-project #section2 p {
+  font-size: 12pt;
+  color: #646363;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  margin-bottom: 15px;
+  padding: 0 20px;
+}
+
+#latest-project #section2 a {
+  display: block;
+  text-decoration: none;
+}
+
+#stories {
+  padding: 50px 0;
+  
+}
+
+#stories .title-border{
+  margin-bottom: 50px;
+}
+
+#stories #section3 {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 2.5% 40% 40% 2.5%;
+  margin: 50px auto;
+  column-gap: 5%;
+}
+#stories #section3 a:first-child {
+  align-self: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #36a884;
+  margin-left: 0;
+  margin-right: auto;
+}
+#stories #section3 a:last-child {
+  align-self: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #36a884;
+  margin-right: 0;
+  margin-left: auto;
+}
+#stories #section3 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 30px;
+}
+
+#stories #section3 div h4 {
+  color: #646363;
+  font-size: 17pt;
+  font-weight: bold;
+}
+
+#stories #section3 div p {
+  line-height: 25px;
+  text-align: left;
+  color: #646363;
+  font-size: 10pt;
+  font-style: italic;
+}
+#stories #section3 div p:last-child {
+  font-style: normal;
+}
+
+#stories #section3 img {
+  width: 100%;
+}
+.mySlides2 {
+  display: none;
+}
+
 /* -------------- START PROJECT PAGE -------------- */
 
 .main-section {
   background-image: linear-gradient(
       to left,
-      rgba(103, 178, 111, 0.7),
-      rgba(5, 117, 230, 0.7)
+      rgba(67, 206, 162, 0.9),
+      rgba(24, 90, 157, 0.9)
     ),
     url("../img/help.jpg");
 
@@ -137,10 +398,23 @@ li.dropdown {
 }
 
 .title-border {
-  height: 4px;
-  width: 30%;
-  margin: 20px auto;
-  background-color: #90c99a;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.line-under {
+  height: 1px;
+  width: 100px;
+  background-color: #43cea2;
+}
+.circle-under {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #43cea2;
+  border-radius: 50%;
+  margin: 4px;
 }
 
 .form-container {
@@ -150,6 +424,9 @@ li.dropdown {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+#section1 div {
+  width: 100%;
 }
 
 #section2 {
@@ -170,12 +447,12 @@ li.dropdown {
 
 #project-form [type="submit"] {
   border: 0;
-  border-radius: 10px;
-  background: rgb(5, 117, 230);
+  border-radius: 5px;
+  background: rgb(24, 90, 157);
   background: linear-gradient(
     90deg,
-    rgba(5, 117, 230, 1) 0%,
-    rgba(0, 242, 96, 1) 100%
+    rgba(24, 90, 157, 1) 0%,
+    rgba(67, 206, 162, 1) 100%
   );
   font-size: 10pt;
   text-transform: uppercase;
@@ -184,35 +461,239 @@ li.dropdown {
   padding: 15px 10px;
   width: 100%;
   margin-top: 14px;
+  margin-right: 50px;
+}
+
+#project-form [type="submit"]:focus {
+  outline: 0 none;
+}
+#project-form [type="submit"]:hover {
+  background: rgb(24, 90, 157);
+  background: linear-gradient(
+    45deg,
+    rgba(24, 90, 157, 1) 0%,
+    rgba(67, 206, 162, 1) 100%
+  );
+  transition-duration: 360ms;
 }
 
 #project-form [type="text"],
 #project-form [type="number"] {
   width: 100%;
-  border: solid #88bee7 1px;
+  border: solid #43cea2 1px;
   border-radius: 5px;
-  background-color: #f6f8ff;
+  background-color: #f7f7ff;
   margin-top: 7px;
   margin-bottom: 15px;
-  padding: 15px 10px;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  color: #646363;
 }
+
+#project-form input[type="text"]:focus,
+#project-form input[type="number"]:focus,
+#project-form textarea:focus,
+#project-form select {
+  box-shadow: 0 0 5px #43cea2;
+  outline: 0 none;
+}
+
 #project-form textarea {
   margin-top: 7px;
+  width: 100%;
   resize: none;
   height: auto;
-  background-color: #f1f9ff;
+  background-color: #f7f7ff;
   border-radius: 5px;
-  border-color: #88bee7;
+  border-color: #43cea2;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  color: #646363;
 }
 #project-form select {
   width: 100%;
-  border: solid #88bee7 1px;
+  border: solid #43cea2 1px;
   border-radius: 5px;
-  background-color: #f6f8ff;
+  background-color: #f7f7ff;
   margin-top: 7px;
   padding: 15px 10px;
+  color: #646363;
+}
+/* -------------- ABOUT US PAGE -------------- */
+
+/* big image section */
+#bigImage {
+  height: 400px;
+  background-image: linear-gradient(
+      to left,
+      rgba(67, 206, 162, 0.9),
+      rgba(24, 90, 157, 0.9)
+    ),
+    url("https://images.pexels.com/photos/3184419/pexels-photo-3184419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  position: relative;
 }
 
+#bigImage h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 30pt;
+  font-weight: bold;
+}
+
+/*vision section */
+
+#vision {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#vision p {
+  line-height: 25px;
+  text-align: center;
+  width: 70%;
+  margin: 15px auto;
+  color: #646363;
+  margin-bottom: 50px;
+}
+
+/* Our team */
+#ourTeam {
+  width: 100%;
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+#teamCards {
+  width: 80%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+
+#teamCards div {
+  width: 17%;
+  background-color: #f7f7ff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 5px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #646363;
+}
+
+#teamCards div img,
+#teamCards div h5,
+#teamCards div h6,
+#teamCards div a {
+  margin: 10px 10px;
+}
+#teamCards div img {
+  margin-top: 20px;
+}
+#ourTeam .personalImage {
+  border-radius: 50%;
+  width: 50%;
+  height: auto;
+}
+
+#teamCards a i {
+  color: #43cea2;
+  font-size: 17pt;
+}
+#teamCards a i:hover {
+  color: #185a9d;
+  transition-duration: 360ms;
+}
+
+/* -------------- CATEGORY PAGE -------------- */
+#projectsPreview {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 40px;
+  row-gap: 40px;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 50px;
+}
+
+#projectsPreview div {
+  font-size: 30px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.07), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+  padding: 10px 10px 0 10px;
+}
+
+.imageStyle {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#projectsPreview article {
+  text-decoration: none;
+  padding: 15px;
+}
+
+#projectsPreview a {
+  display: block;
+  text-decoration: none;
+}
+#projectsPreview h4 {
+  margin-bottom: 20px;
+  font-size: 12pt;
+  color: #646363;
+  text-overflow: ellipsis;
+
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#projectsPreview p {
+  font-size: 12pt;
+  color: #646363;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+
+.fa-money-bill-alt,
+.fa-bullseye {
+  color: #43cea2;
+}
+
+#catagory-main {
+  background-image: linear-gradient(
+      to left,
+      rgba(67, 206, 162, 0.9),
+      rgba(24, 90, 157, 0.9)
+    ),
+    url("https://images.pexels.com/photos/2467396/pexels-photo-2467396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  padding: 50px 0;
+}
+
+#catagory-main .card-title {
+  color: #fff;
+}
+
+#catagory-main .line-under {
+  background-color: #fff;
+}
+#catagory-main .circle-under {
+  border-color: #fff;
+}
 /* -------------- WALLET PAGE --------------  */
 #in_my_wallet {
   color: seashell;
@@ -250,7 +731,6 @@ input {
   border: 2px solid dodgerblue;
 }
 
-
 #first {
   margin-left: 399px;
   position: relative;
@@ -275,6 +755,6 @@ input {
   color: #0575e6;
 }
 
-#myChart{
+#myChart {
   margin: 0 auto;
 }
