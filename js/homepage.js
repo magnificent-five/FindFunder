@@ -1,12 +1,13 @@
 "use strict";
+import { allProjects } from "./app.js";
 
-var allprojects;
-allprojects = JSON.parse(localStorage.getItem("allProjects"));
-console.log(allprojects);
+// var allprojects;
+// allprojects = JSON.parse(localStorage.getItem("allProjects"));
+console.log(allProjects);
 
 var perviewsection = document.getElementById("section2");
 
-if(allprojects){
+
   for (var i = 0; i < 3; i++) {
     var div = document.createElement("div");
     div.id = i;
@@ -14,25 +15,25 @@ if(allprojects){
     var link = document.createElement("a");
     link.addEventListener("click", redirectToProjectPage);
     link.setAttribute("href", "project-page.html");
-    link.setAttribute("id", allprojects[i].id);
+    link.setAttribute("id", allProjects[i].id);
     
     var img = document.createElement("img");
-    img.setAttribute("src", allprojects[i].image);
+    img.setAttribute("src", allProjects[i].image);
     img.setAttribute("class", "imageStyle");
     link.appendChild(img);
     var article = document.createElement("article");
     var h4 = document.createElement("h4");
-    h4.textContent = allprojects[i].title;
+    h4.textContent = allProjects[i].title;
     article.appendChild(h4);
     var p = document.createElement("p");
     p.setAttribute("class", "card-info");
-    p.innerHTML = `<i class="far fa-money-bill-alt"></i> <span id="raised">$${allprojects[i].raised}</span> Raised of <i class="fas fa-bullseye"></i> <span id="goal">$${allprojects[i].goal}</span>`;
+    p.innerHTML = `<i class="far fa-money-bill-alt"></i> <span id="raised">$${allProjects[i].raised}</span> Raised of <i class="fas fa-bullseye"></i> <span id="goal">$${allProjects[i].goal}</span>`;
     article.appendChild(p);
     link.appendChild(article);
     div.appendChild(link);
     perviewsection.appendChild(div);
   }
-}
+
 
 
 function redirectToProjectPage(event) {
