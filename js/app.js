@@ -76,7 +76,7 @@ function preExisting() {
   }
 }
 
-// this adds an invent listner to each option in the catagory  nav
+// this adds an envent listner to each option in the catagory  nav
 // and it takes you to that page and renders all projects related to
 // that catagory .
 var dorpDownOptionMedical = document.getElementById("Medical");
@@ -133,3 +133,18 @@ export {
   filteration,
   addToLoalStorage,
 };
+
+
+
+//add event listener to start page button to go to start project page
+var startProject =document.getElementsByClassName('start');
+
+for (var i=0 ; i<startProject.length ;i++){
+  startProject[i].addEventListener('click',startFunction);
+}
+
+
+function startFunction(event){
+  console.log('this is for startpage')
+  window.location.href ='start-project.html'
+}
