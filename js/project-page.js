@@ -43,10 +43,7 @@ function donateFunction(event) {
   // update the wallet in HTMl
   event.preventDefault();
   //check if you have a wallet
-<<<<<<< HEAD
-  if (!localStorage.getItem("currentWallet")) {
-    alert("You haven't add a wallet yet");
-=======
+
   if (!localStorage.getItem("wallet")) {
        // Get the modal
 var modal = document.getElementById("myModal");
@@ -72,17 +69,14 @@ window.onclick = function(event) {
   }
 }
     //alert("You haven't add a wallet yet");
->>>>>>> 8dcd397b04b62881c09c5d98c3fc082b0b238247
+
     return;
   }
   currentWallet = JSON.parse(localStorage.getItem("currentWallet"));
   var donateAmount = Number(event.target.donateValue.value);
 
   //check if you have enough money in the wallet
-<<<<<<< HEAD
-  if (donateAmount > currentWallet.amount) {
-    alert("You don't have enough money");
-=======
+
   if (donateAmount > myWallet.amount) {
        // Get the modal
 var modal = document.getElementById("myModal");
@@ -108,7 +102,7 @@ window.onclick = function(event) {
   }
 }
     //alert("You don't have enough money");
->>>>>>> 8dcd397b04b62881c09c5d98c3fc082b0b238247
+
     return;
   }
   currentWallet.amount -= donateAmount;
