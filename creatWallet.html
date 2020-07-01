@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/creatWallet.css">
+
 </head>
 
 <body>
@@ -39,27 +40,36 @@
         </div>
     </header>
     <main id="mainfinal">
-        
-            <h2> Creat Wallet</h2>
-        
-        <form id="formCreat">
-            <fieldset>
-            <input id="creat" type="submit" value="Creat Wallet">
-            </fieldset>
-          
-        </form>
-        
-        <form id="formUser">
-        </form>
-        <form id="login">
-            <fieldset>
-                <input id="logins" type="submit" value="Log In">
-                <input id="loginName" type="text" placeholder="User Name">
-            </fieldset>
-        </form>
-        <form id="walletOptions">
-         
-        </form>
+
+        <div id='titlewallet'>
+            <h1 class="card-title">Creat Wallet</h1>
+            <div class="title-border">
+                <span class="line-under"></span>
+                <span class="circle-under"></span>
+                <span class="line-under"></span>
+            </div>
+        </div>
+        <div class="flex">
+
+            <div id="creatdiv">
+                <form id="formCreat">
+                    <fieldset>
+                        <input id="creat" type="submit" value="Creat Wallet">
+                    </fieldset>
+                </form>
+
+                <form id="formUser">
+                </form>
+            </div>
+
+
+            <form id="login">
+                <fieldset>
+                    <input id="logins" type="submit" value="Log In">
+                    <input id="loginName" type="text" placeholder="User Name">
+                </fieldset>
+            </form>
+        </div>
 
 
     </main>

@@ -74,8 +74,15 @@ function functionlogin(event) {
         for (var i = 0; i < walletsArray.length; i++) {
             if (walletsArray[i].name == username) {
                 currentWallet = walletsArray[i];
+                
+
+                window.location.href ="wallet.html"
+                saveMyWallet();
+                updatewallets();
             }
         }
+
+        
     }
 
     else {
@@ -86,6 +93,7 @@ function functionlogin(event) {
     saveMyWallet();
     updatewallets();
 
+    
 }
 
 

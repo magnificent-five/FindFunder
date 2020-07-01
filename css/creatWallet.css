@@ -1,60 +1,86 @@
-h2{
-    font-size: 300%;
-}
-#formCreat {
-    color: white; 
-    margin: 30px;  
-}
-#creat  {
-    width: 300px;
-    font-size: larger;
-    height: 45px;
-    border-radius: 5px;
-    color: white;
-    background-color:#068061 ;
-    border: none;
-    font-size: 150%;
-    margin-left: 50px;
-}
-#logins{
-    width: 200px;
-    font-size: larger;
-    height: 40px;
-    border-radius: 5px;
-    color: white;
-    background-color:#068061 ;
-    border: none;
-    font-size: 150%;
-    margin-left: 50px;
-}
-#loginName , #inputName{
-    width: 200px;
-    font-size: larger;
-    height: 30px;
-    border-radius: 5px;
-    border:solid #068061 ;
-    border: none;
-    font-size: 150%;
-    margin: 20px;
-    
+#mainfinal{
+    background-image: linear-gradient(
+      to left,
+      rgba(67, 206, 162, 0.9),
+      rgba(24, 90, 157, 0.9)
+    ),
+    url("../img/help.jpg");
+
+  background-size: cover;
+  color: white;
+  padding: 100px 0;
 }
 
-#submitCreat{
-    margin-top: 30px;
-    width: 200px;
-    font-size: larger;
-    height: 35px;
-    border-radius: 5px;
-    color: white;
-    background-color:#068061 ;
-    border: none;
-    font-size: 150%;
-    margin: 20px;
-   
+#titlewallet .card-title {
+    color: #fff;
+}
+  
+#titlewallet .line-under {
+    background-color: #fff;
+}
+#titlewallet .circle-under {
+    border-color: #fff;
 }
 
-#formUser{
-    margin: 50px;
-    
-    width: 400px;
+.flex {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 60px;
+    width: 70%;
+    margin: 50px auto;
+  }
+
+  #creatdiv , #login{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+#formCreat , #formUser {
+  
+    margin-bottom: 10px;
 }
+
+
+  #creat,
+  #logins,
+  #submitCreat {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    border: 0;
+    border-radius: 5px;
+    font-size: 10pt;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    padding: 15px 15px;
+    background-color: #43cea2;
+  }
+  
+  #logins{
+    margin-bottom: 10px;  
+  }
+  #creat:hover,
+  #logins:hover,
+  #submitCreat:hover {
+    color: #646363;
+    background-color: #d3dfe7;
+    transition-duration: 360ms;
+  }
+
+  #inputName,
+  #loginName {
+    width: 70%;
+    margin: 0 auto;
+    border: solid #43cea2 1px;
+    border-radius: 5px;
+    background-color: #f7f7ff;
+    padding: 15px 15px;
+    box-sizing: border-box;
+    color: #646363;
+    display: block;
+  }
+

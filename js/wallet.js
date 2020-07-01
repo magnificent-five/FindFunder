@@ -46,10 +46,10 @@ function withDrawFunction(event) {
   // save wallate in local storage
   // update the wallet in HTMl
   event.preventDefault();
-<<<<<<< HEAD
+
   if (currentWallet.amount < withdrawInput.value) {
     alert("you don't have enough money");
-=======
+
   if (newWallet.amount < withdrawInput.value) {
    // Get the modal
 var modal = document.getElementById("myModal");
@@ -75,7 +75,7 @@ window.onclick = function(event) {
   }
 }
     //alert("you don't have enough money");
->>>>>>> 8dcd397b04b62881c09c5d98c3fc082b0b238247
+
   } else {
     currentWallet.amount -= Number(withdrawInput.value);
   }
@@ -83,7 +83,7 @@ window.onclick = function(event) {
   saveWallet();
   inMyWallet();
   updatewallets();
-}
+}}
 
 // function to save wallet
 function saveWallet() {
