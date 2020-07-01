@@ -6,6 +6,8 @@ var perviewContainer = document.getElementById("projectsPreview");
 // presented in and  it sets them as the event listener
 //  when one of the divs(projects) is clicked to takes you
 // to an indvisual page that contains all info that relate to it
+var categoryName = document.getElementById('catagory-name');
+categoryName.textContent = loadInfo2[0].catagory
 for (var i = 0; i < loadInfo2.length; i++) {
   var div = document.createElement("div");
   div.id = i;
