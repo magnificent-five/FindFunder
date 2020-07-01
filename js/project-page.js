@@ -18,7 +18,7 @@ var personName = document.getElementById("name");
 personName.textContent = visted.name;
 
 var raised = document.getElementById("raised");
-raised.textContent = visted.raised;
+raised.innerHTML = visted.raised;
 
 var personlocation = document.getElementById("location");
 personlocation.textContent = visted.location;
@@ -28,7 +28,6 @@ goal.textContent = visted.goal;
 
 var story = document.getElementById("story");
 story.textContent = visted.story;
-
 
 // function to get back the wallet from storage
 var myWallet;
@@ -44,29 +43,29 @@ function donateFunction(event) {
   event.preventDefault();
   //check if you have a wallet
   if (!localStorage.getItem("wallet")) {
-       // Get the modal
-var modal = document.getElementById("myModal");
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-// open the modal 
-  modal.style.display = "block";
+    // open the modal
+    modal.style.display = "block";
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
     //alert("You haven't add a wallet yet");
     return;
   }
@@ -75,29 +74,29 @@ window.onclick = function(event) {
 
   //check if you have enough money in the wallet
   if (donateAmount > myWallet.amount) {
-       // Get the modal
-var modal = document.getElementById("myModal");
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-// open the modal 
-  modal.style.display = "block";
+    // open the modal
+    modal.style.display = "block";
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    };
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    };
     //alert("You don't have enough money");
     return;
   }
@@ -107,15 +106,17 @@ window.onclick = function(event) {
   updateRaised();
   localStorage.setItem("wallet", JSON.stringify(myWallet));
 
-  //check if we have projectDonateArray in local storage 
+  //check if we have projectDonateArray in local storage
   if (localStorage.getItem("projectDonateArray")) {
     projectDonateArray = JSON.parse(localStorage.getItem("projectDonateArray"));
   }
 
   //update the amount of donate for elemnts in projectDonateArray
   updateAmount(donateAmount);
-  localStorage.setItem("projectDonateArray", JSON.stringify(projectDonateArray));
-
+  localStorage.setItem(
+    "projectDonateArray",
+    JSON.stringify(projectDonateArray)
+  );
 }
 
 var raisedNum = parseInt(raised.textContent);
@@ -143,16 +144,12 @@ function checkForObject(e) {
   return e.id == this;
 }
 
-
-
-
 // creat new arry
 var projectDonateArray = [];
 //check if there is project array in storage
 
 if (localStorage.getItem("projectDonateArray")) {
   projectDonateArray = JSON.parse(localStorage.getItem("projectDonateArray"));
-
 }
 
 //Project Donate Constructor
@@ -164,15 +161,12 @@ function ProjectDonate(obj, donateAmount) {
   projectDonateArray.push(this);
 }
 
-
-
 function updateAmount(donateAmount) {
-
-  if (projectDonateArray.some(e => e.id === visted.id)) {
+  if (projectDonateArray.some((e) => e.id === visted.id)) {
     /* projectDonateArray contains the element we're looking for */
 
     //edit amount for the element if we have it in projectDonateArray
-    console.log(localStorage.getItem("projectDonateArray"))
+    console.log(localStorage.getItem("projectDonateArray"));
     for (var i = 0; i < projectDonateArray.length; i++) {
       if (projectDonateArray[i].id == visted.id) {
         projectDonateArray[i].amount += donateAmount;
@@ -183,6 +177,9 @@ function updateAmount(donateAmount) {
   //if we don't have the element in projectDonateArray go and creat it
   else {
     var newProjectDonate = new ProjectDonate(visted, donateAmount);
-
-  } localStorage.setItem("projectDonateArray", JSON.stringify(projectDonateArray));
+  }
+  localStorage.setItem(
+    "projectDonateArray",
+    JSON.stringify(projectDonateArray)
+  );
 }
