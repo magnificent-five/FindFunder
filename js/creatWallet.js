@@ -81,8 +81,7 @@ function functionlogin(event) {
                 updatewallets();
             }
         }
-
-        
+   
     }
 
     else {
