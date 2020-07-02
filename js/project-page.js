@@ -30,7 +30,7 @@ var story = document.getElementById("story");
 story.textContent = visted.story;
 
 // function to get back the wallet from storage
-var myWallet;
+var currentWallet;
 // Create an event listener so that when the donate link is clicked, the donateFunction method is invoked.
 var donate = document.getElementById("form");
 donate.addEventListener("submit", donateFunction);
@@ -42,7 +42,8 @@ function donateFunction(event) {
   // update the wallet in HTMl
   event.preventDefault();
   //check if you have a wallet
-  if (!localStorage.getItem("wallet")) {
+
+  if (!localStorage.getItem("currentWallet")) {
     // Get the modal
     var modal = document.getElementById("myModal");
 
@@ -67,13 +68,15 @@ function donateFunction(event) {
       }
     };
     //alert("You haven't add a wallet yet");
+
     return;
   }
-  myWallet = JSON.parse(localStorage.getItem("wallet"));
+  currentWallet = JSON.parse(localStorage.getItem("currentWallet"));
   var donateAmount = Number(event.target.donateValue.value);
 
   //check if you have enough money in the wallet
-  if (donateAmount > myWallet.amount) {
+
+  if (donateAmount > currentWallet.amount) {
     // Get the modal
     var modal = document.getElementById("myModal");
 
@@ -98,13 +101,14 @@ function donateFunction(event) {
       }
     };
     //alert("You don't have enough money");
+
     return;
   }
-  myWallet.amount -= donateAmount;
+  currentWallet.amount -= donateAmount;
   //display the new raised
   displayNewRaised(donateAmount);
   updateRaised();
-  localStorage.setItem("wallet", JSON.stringify(myWallet));
+  localStorage.setItem("currentWallet", JSON.stringify(currentWallet));
 
   //check if we have projectDonateArray in local storage
   if (localStorage.getItem("projectDonateArray")) {
@@ -113,10 +117,11 @@ function donateFunction(event) {
 
   //update the amount of donate for elemnts in projectDonateArray
   updateAmount(donateAmount);
-  localStorage.setItem(
-    "projectDonateArray",
-    JSON.stringify(projectDonateArray)
-  );
+
+  localStorage.setItem("projectDonateArray", JSON.stringify(projectDonateArray));
+  updatewallets();
+
+
 }
 
 var raisedNum = parseInt(raised.textContent);
@@ -177,9 +182,24 @@ function updateAmount(donateAmount) {
   //if we don't have the element in projectDonateArray go and creat it
   else {
     var newProjectDonate = new ProjectDonate(visted, donateAmount);
-  }
-  localStorage.setItem(
-    "projectDonateArray",
-    JSON.stringify(projectDonateArray)
-  );
+
+
+  } localStorage.setItem("projectDonateArray", JSON.stringify(projectDonateArray));
 }
+
+
+
+
+//function to updat the wallet in wallets array
+function updatewallets() {
+//seclect the wallet from wallets array and update it
+  var walletsArray = JSON.parse(localStorage.getItem("walletsArray"));
+  for (var i = 0; i < walletsArray.length; i++) {
+    if (walletsArray[i].name == currentWallet.name) {
+      walletsArray[i].amount = currentWallet.amount;
+    }
+  }
+ 
+  localStorage.setItem("walletsArray", JSON.stringify(walletsArray));
+}
+
