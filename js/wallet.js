@@ -94,7 +94,7 @@ function saveWallet() {
 // function to update the contant of IN MY WALLET
 function inMyWallet() {
   console.log(currentWallet);
-  walletValue.textContent = parseInt(currentWallet.amount);
+  walletValue.textContent = "$" + parseInt(currentWallet.amount);
 }
 
 //function to keep track of my stored wallet
