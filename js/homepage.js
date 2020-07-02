@@ -1,8 +1,8 @@
 "use strict";
-import { allProjects } from "./app.js";
+// import { allProjects } from "./app.js";
 
-// var allprojects;
-// allprojects = JSON.parse(localStorage.getItem("allProjects"));
+var allProjects;
+allProjects = JSON.parse(localStorage.getItem("allProjects"));
 console.log(allProjects);
 
 var perviewsection = document.getElementById("section2");
